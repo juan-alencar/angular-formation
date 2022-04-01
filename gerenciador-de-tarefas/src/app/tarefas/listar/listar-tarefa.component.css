@@ -1,0 +1,51 @@
+.task-list {
+  width: 100vw;
+  align-items: center;
+  padding: 0px 200px;
+  flex-direction: column;
+}
+
+.my-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-header p {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.my-header a {
+  background-color: #08dd97;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 24px;
+}
+
+.my-table table,
+tbody,
+tr {
+  width: 100%;
+  color: #ffffff;
+}
+
+td {
+  font-size: 18px;
+  padding: 18px 0px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-status {
+  width: 4%;
+}
+.task-name {
+  width: 80%;
+}
+.task-actions {
+  text-align: right;
+  padding-right: 24px;
+}

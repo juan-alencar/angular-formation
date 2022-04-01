@@ -1,0 +1,40 @@
+<div class="task-list">
+    <div class="my-header">
+        <p>Tarefas</p>
+        <a [routerLink]="['/tarefas/cadastrar']">
+            Nova Tarefa
+        </a>
+    </div>
+
+    <div class="my-table">
+        <table>
+            <tbody>
+                <tr [class]="tarefa.concluida ? 'table-success': 'table-danger'" *ngFor="let tarefa of tarefas">
+                    <td class="task-status">
+                        <input type="checkbox" [value]="tarefa.id" (click)="alterarStatus(tarefa)"
+                            [checked]="tarefa.concluida">
+                    </td>
+
+                    <td [tarefaConcluida]="tarefa.concluida" class="task-name">
+                        {{ tarefa.nome }}
+                    </td>
+                    <td class="task-actions">
+                        <a [routerLink]="['/tarefas/editar', tarefa.id]" title="Editar" alt="Editar">
+                        </a>
+                        <a href="#" title="Remover" (click)="remover($event, tarefa)" alt="Remover">
+                            Remover
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p *ngIf="tarefas.length==0">Nenhuma tarefa cadastrada.</p>
+</div>
+<!-- 
+    cores da minha landing page:
+verde claro #07F49E
+azul escuro #0B3866
+
+ -->
